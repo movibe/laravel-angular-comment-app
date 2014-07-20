@@ -1,6 +1,8 @@
 angular.module('commentService', [])
 
-	.factory('Comment', function($http) {
+	.factory('Comment', function($http, CSRF_TOKEN) {
+
+        console.log(CSRF_TOKEN);
 
 		return {
 			get : function() {
